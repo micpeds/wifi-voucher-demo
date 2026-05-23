@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Hola Coffee — Free WiFi Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+</div>
+<div class="beans" aria-hidden="true">
+  <div class="bean"><svg width="22" height="30" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="16" height="22" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="26" height="35" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="18" height="24" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="14" height="19" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="20" height="27" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="24" height="32" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="15" height="20" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="19" height="26" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+  <div class="bean"><svg width="12" height="16" viewBox="0 0 30 40" fill="rgba(0,60,90,0.5)"><ellipse cx="15" cy="20" rx="12" ry="18"/><path d="M15 4Q22 12 22 20Q22 28 15 36" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" fill="none"/></svg></div>
+</div>
+<div class="card" role="main">
+  <div class="logo-wrap">
+    <div class="logo-pill">
+     <img src="/assets/holalogo.png" alt="Hola Coffee" class="logo-img" onerror="handleLogoError(this)">
+      <img src="/assets/gbiteslogo.png" alt="Gbites" class="logo-img" onerror="handleLogoError(this)">
+      <span class="logo-fallback">HOLA COFFEE</span>
+    </div>
+  </div>
+  <div class="wifi-wrap" aria-hidden="true">
+    <svg class="wifi-icon" viewBox="0 0 42 42" fill="none">
+      <path d="M4 15C9.5 9.5 15.5 7 21 7C26.5 7 32.5 9.5 38 15" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M9 21C12.8 17.2 16.8 15 21 15C25.2 15 29.2 17.2 33 21" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M14.5 27C16.8 24.7 18.8 23.5 21 23.5C23.2 23.5 25.2 24.7 27.5 27" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+      <circle cx="21" cy="34" r="2.5" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="heading">
+    <h1>Connect to WiFi</h1>
+    <p>Enter your voucher code to enjoy<br>complimentary internet access</p>
+  </div>
+  <div class="divider"></div>
+  
+  <form id="login-form" novalidate onsubmit="return false;">
+    <div class="field">
+      <label class="field-label" for="username">Voucher Code</label>
+      <div class="input-wrap">
+        <input type="text" id="username" name="username" class="voucher-input" placeholder="EX:HOLA1234" maxlength="8" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" inputmode="text" aria-label="Enter your WiFi voucher code">
+        <button class="clear-btn" id="clear-btn" type="button" aria-label="Clear">✕</button>
+      </div>
+      <div class="err-msg" id="err-msg" role="alert"></div>
+    </div>
+    <button class="connect-btn" type="button" id="connect-btn">
+      <div class="spinner" id="spinner"></div>
+      <span id="btn-label">Connect Now</span>
+    </button>
+  </form>
+</div>
+<p class="footer"><span>Hola Coffee</span> · G. Tolentino St. Manila</p>
+
+<script>
+(function(){
+  var input=document.getElementById('username');
+  var clearBtn=document.getElementById('clear-btn');
+  var connectBtn=document.getElementById('connect-btn');
+  var spinner=document.getElementById('spinner');
+  var btnLabel=document.getElementById('btn-label');
+  var errMsg=document.getElementById('err-msg');
+  
+  // Format input (Alphanumeric lang, up to 8 chars)
+  function fmt(v){return v.replace(/[^A-Z0-9]/gi,'').toUpperCase().slice(0,8);}
+  
+  input.addEventListener('input',function(){
+    var pos=input.selectionStart;
+    input.value=fmt(input.value);
+    try{input.setSelectionRange(Math.min(pos,input.value.length),Math.min(pos,input.value.length))}catch(e){}
+    clearBtn.classList.toggle('show',input.value.length>0);
+    input.classList.remove('is-error');
+    errMsg.classList.remove('show');
+  });
+  
+  // Para pwede i-Enter sa keyboard imbis na i-click
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){
+      e.preventDefault();
+      connectBtn.click();
+    }
+  });
+  
+  clearBtn.addEventListener('click',function(){
+    input.value='';
+    clearBtn.classList.remove('show');
+    input.classList.remove('is-error');
+    errMsg.classList.remove('show');
+    input.focus();
+  });
+  
+  // Button click animation
+  connectBtn.addEventListener('pointerdown',function(e){
+    var r=document.createElement('span');r.className='ripple';
+    var rect=this.getBoundingClientRect();var sz=Math.max(rect.width,rect.height)*2;
+    r.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+(e.clientX-rect.left-sz/2)+'px;top:'+(e.clientY-rect.top-sz/2)+'px';
+    this.appendChild(r);setTimeout(function(){r.parentNode&&r.parentNode.removeChild(r)},600);
+  });
+  
+  // MAIN DEMO LOGIC
+  connectBtn.addEventListener('click',function(){
+    var code = input.value.trim().toUpperCase();
+    
+    // Check if input is empty
+    if(code === ''){
+      input.classList.add('is-error');
+      errMsg.innerHTML='⚠️ Please enter a voucher code.';
+      errMsg.classList.add('show');
+      input.focus();
+      return;
+    }
+    
+    // Check for the specific test code "HOLA1234"
+    if(code === 'HOLA1234') {
+      // SUCCESS! Simulate connection delay...
+      input.classList.remove('is-error');
+      errMsg.classList.remove('show');
+      
+      connectBtn.classList.add('is-loading');
+      spinner.style.display='block';
+      btnLabel.textContent='Authenticating...';
+      
+      // Redirect to alogin.html after 1.5 seconds
+      setTimeout(function() {
+        window.location.href = 'alogin.html';
+      }, 1500);
+      
+    } else {
+      // FAILED! Wrong code.
+      input.classList.add('is-error');
+      errMsg.innerHTML='⚠️ Invalid voucher code. Please try again.';
+      errMsg.classList.add('show');
+      input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
